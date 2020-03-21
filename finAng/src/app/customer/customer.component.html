@@ -1,0 +1,25 @@
+<button [routerLink]="['/Update']">Add New Customer</button>
+<div class="container">            
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of posts">
+          <td><a [routerLink]="['/Edit',item.FirstName]">{{item.FirstName}}</a></td>
+          <td>{{item.Lastname}}</td>
+          <td>{{item.Address}}</td>
+          <td>{{item.City}}</td>
+          <td>{{item.State}}</td>
+          <td>{{item.Email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
